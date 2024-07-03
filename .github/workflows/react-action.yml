@@ -1,0 +1,32 @@
+name: React Action
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'react-action/**'
+      - '.github/workflows/react-action.yml'
+
+defaults:
+  run:
+    working-directory: ./react-action
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci # prevents installing breaking changes
+
+      - name: Run tests
+        run: npm test
