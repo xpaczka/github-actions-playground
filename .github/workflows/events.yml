@@ -11,10 +11,6 @@ on:
       - '.github/workflows/events.yml'
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: ./events
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
