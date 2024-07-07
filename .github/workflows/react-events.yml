@@ -9,6 +9,7 @@ on:
     paths:
       - 'react-events/**'
       - '.github/workflows/react-events.yml'
+  workflow_dispatch:
 
 defaults:
   run:
