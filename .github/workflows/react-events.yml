@@ -1,4 +1,4 @@
-name: Events
+name: React Events
 
 on:
   pull_request:
@@ -7,9 +7,13 @@ on:
     branches:
       - main
     paths:
-      - 'events/**'
-      - '.github/workflows/events.yml'
+      - 'react-events/**'
+      - '.github/workflows/react-events.yml'
   workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: ./react-events
 
 jobs:
   deploy:
