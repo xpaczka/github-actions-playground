@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - 'artifacts/**'
-      - '.github/workflows/artifacts'
+      - '.github/workflows/artifacts.yml'
 
 defaults:
   run:
